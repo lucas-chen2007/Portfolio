@@ -1,0 +1,206 @@
+.experience-section {
+  background: #0f130d;
+}
+
+.experience-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(135deg, #36432f 0%, #c1ceb9 100%);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.timeline-item::before {
+  content: none;
+}
+
+/* Image styling */
+.timeline-image-wrapper {
+  position: absolute;
+  top: -49px;
+  width: 800px;
+  height: 518px; /* added px for consistency */
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Dark overlay to fade image into background */
+.timeline-image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* adjust opacity for more/less fade */
+  pointer-events: none;
+}
+
+.timeline-item.left .timeline-image-wrapper {
+  right: 65%;
+  transform: translateX(115%);
+}
+
+.timeline-item.right .timeline-image-wrapper {
+  left: 65%;
+  transform: translateX(-115%);
+}
+
+.timeline-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35; /* soften the image itself */
+}
+
+/* Content styling */
+.timeline-item.left {
+  padding-right: 50%;
+}
+
+.timeline-item.right {
+  padding-left: 50%;
+}
+
+.timeline-content {
+  background: #272f21;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border: 1px transparent #ffffff00;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-header {
+  margin-bottom: 1rem;
+}
+
+.company-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.role {
+  display: block;
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.period {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #78866B;
+  background: #c1ceb9;
+  padding: 0.3rem 0.8rem;
+
+  border-radius: 15px;
+}
+.period:hover {
+  background: linear-gradient(135deg, #36432f 0%, #c1ceb9 100%);
+  color: white;
+  border: 1px solid white;
+}
+
+.description {
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-badge {
+  background: #c1ceb9;
+  color: #78866B;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  background: linear-gradient(135deg, #36432f 0%, #c1ceb9 100%);
+  color: white;
+  transform: translateY(-2px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    padding-left: 60px !important;
+    padding-right: 0 !important;
+  }
+
+  .timeline-image-wrapper {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-bottom: 1rem;
+    transform: none !important;
+  }
+
+  .timeline-content {
+    padding: 1.5rem;
+  }
+
+  .company-name {
+    font-size: 1.2rem;
+  }
+
+  .role {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-content {
+    padding: 1.2rem;
+  }
+
+  .technologies {
+    justify-content: center;
+  }
+}

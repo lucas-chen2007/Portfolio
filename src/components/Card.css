@@ -1,0 +1,147 @@
+.card {
+  background: #F5F5DC;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.card-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #483C32 0%, #B38B6D 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.card-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.card-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.card-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  background: linear-gradient(135deg, #483C32 0%, #B38B6D 100%);
+  color: #ffffff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: #e9ecef;
+  color: #495057;
+}
+
+.card-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  flex: 1;
+  justify-content: center;
+  min-width: 120px;
+}
+
+.card-link.github {
+  background: #333;
+  color: white;
+}
+
+.card-link.github:hover {
+  background: #555;
+  transform: translateY(-2px);
+}
+
+.card-link.demo {
+  background: #333;
+  color: white;
+}
+
+.card-link.demo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+@media (max-width: 768px) {
+  .card-content {
+    padding: 1.2rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-links {
+    flex-direction: column;
+  }
+
+  .card-link {
+    min-width: auto;
+  }
+}
