@@ -9,7 +9,7 @@ const Projects = () => {
       title: "Imposter Game",
       description:
         "Designed personalized version of the imposter game.",
-      techStack: ["CSS", "HTML", "JS"],
+      techStack: ["CSS", "HTML", "JavaScript"],
       githubLink: "https://github.com/lucas-chen2007/Imposter",    
       demoLink: "https://imposter.lucaschen.ca",      
       image: "/images/imposter.png"      

@@ -61,18 +61,11 @@ const Contact = () => {
                 <p><a href="mailto:lachenakis@gmail.com">lachenakis@gmail.com</a></p>
               </div>
             </div>
-            <div className="contact-item">
-              <span className="contact-icon" aria-hidden>📱</span>
-              <div>
-                <h4>Phone</h4>
-                <p><a href="tel:+13432620539">+1 (343) 262-0539</a></p>
-              </div>
-            </div>
           </div>
 
           <div className="contact-cta">
             <a className="btn btn-primary" href="#projects">View My Work</a>
-            <a className="btn btn-secondary" href="mailto:a27kotha@uwaterloo.ca?subject=Project%20Opportunity">Email Me</a>
+            <a className="btn btn-secondary" href="mailto:l623chen@uwaterloo.ca?subject=Project%20Opportunity">Email Me</a>
           </div>
         </div>
 
