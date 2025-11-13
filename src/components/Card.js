@@ -2,8 +2,10 @@ import React from 'react';
 import './Card.css';
 
 const Card = ({ title, description, techStack, githubLink, demoLink, image }) => {
-  return (
-    <div className="card">
+  const link = demoLink; // use demo first, fallback to GitHub
+
+  const CardContent = () => (
+    <>
       <div className="card-image">
         {image ? (
           <img src={image} alt={title} />
@@ -28,22 +30,29 @@ const Card = ({ title, description, techStack, githubLink, demoLink, image }) =>
               target="_blank" 
               rel="noopener noreferrer"
               className="card-link github"
+              onClick={(e) => e.stopPropagation()} // prevents double navigation
             >
               <span>📁</span> GitHub
             </a>
           )}
-          {demoLink && (
-            <a 
-              href={demoLink} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="card-link demo"
-            >
-              <span>🌐</span> Live Demo
-            </a>
-          )}
         </div>
       </div>
+    </>
+  );
+
+  return link ? (
+    <a 
+      href={link} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="card"
+      style={{ textDecoration: 'none', color: 'inherit' }}
+    >
+      <CardContent />
+    </a>
+  ) : (
+    <div className="card">
+      <CardContent />
     </div>
   );
 };
