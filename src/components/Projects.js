@@ -29,7 +29,7 @@ const Projects = () => {
     <Section
       id="projects"
       title="Projects"
-      subtitle="A few things I've built and shipped"
+      subtitle="A few things I've built!"
       className="projects-section"
     >
       <div className="projects-grid">
