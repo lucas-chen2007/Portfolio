@@ -24,7 +24,7 @@ const NavBar = () => {
 
   const navLinks = [
     { id: 'about', label: 'About Me' },
-    // { id: 'projects', label: 'Projects' }, // uncomment if needed
+    { id: 'projects', label: 'Projects' }, // uncomment if needed
     { id: 'experience', label: 'Experience' },
     { id: 'contact', label: 'Contact' }
   ];
