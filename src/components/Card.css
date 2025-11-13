@@ -4,7 +4,7 @@
   overflow: hidden;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  border: 1px solid #e9ecef;
+  border: 1px solid #272f21;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -52,13 +52,13 @@
 .card-title {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 1rem;
   line-height: 1.3;
 }
 
 .card-description {
-  color: #666;
+  color: #ffffff;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   flex: 1;
